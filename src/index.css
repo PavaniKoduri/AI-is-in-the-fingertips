@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', 'Poppins', system-ui, -apple-system, sans-serif;
+  --font-display: 'Quicksand', 'Outfit', sans-serif;
+  --font-cute: 'Nunito', 'Quicksand', sans-serif;
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+  }
+
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .rainbow-text {
+    background: linear-gradient(
+      135deg,
+      #ec4899 10%,
+      #f43f5e 20%,
+      #f97316 30%,
+      #eab308 40%,
+      #22c55e 55%,
+      #3b82f6 70%,
+      #a855f7 85%,
+      #ec4899 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: rainbow-flow 8s ease infinite;
+  }
+
+  /* Pastel rainbow specific colors */
+  .bg-pastel-lavender { background-color: #f3f0ff; }
+  .bg-pastel-pink { background-color: #fff0f6; }
+  .bg-pastel-blue { background-color: #e6f7ff; }
+  .bg-pastel-green { background-color: #f6ffed; }
+  .bg-pastel-yellow { background-color: #feffe6; }
+  .bg-pastel-peach { background-color: #fff2e8; }
+
+  @keyframes rainbow-flow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .animate-blob {
+    animation: blob-bounce 12s infinite alternate;
+  }
+  
+  .animate-blob-slow {
+    animation: blob-bounce-slow 16s infinite alternate;
+  }
+
+  .animate-blob-slower {
+    animation: blob-bounce-slower 20s infinite alternate;
+  }
+
+  @keyframes blob-bounce {
+    0% { transform: translate(0px, 0px) scale(1); }
+    50% { transform: translate(30px, -40px) scale(1.15); }
+    100% { transform: translate(-20px, 20px) scale(0.9); }
+  }
+
+  @keyframes blob-bounce-slow {
+    0% { transform: translate(0px, 0px) scale(1.1); }
+    50% { transform: translate(-40px, 30px) scale(0.9); }
+    100% { transform: translate(25px, -20px) scale(1.05); }
+  }
+
+  @keyframes blob-bounce-slower {
+    0% { transform: translate(0px, 0px) scale(0.95); }
+    50% { transform: translate(20px, 35px) scale(1.1); }
+    100% { transform: translate(-35px, -15px) scale(1); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: #334155;
+  background-color: #fafbfc;
+  overflow-x: hidden;
+}
+
