@@ -1,0 +1,6 @@
+{
+  "name": "Minimal Rainbow Landing Page",
+  "description": "A modern, highly minimalistic landing page with a dreamy, soft pastel rainbow aesthetic, smooth animations, and generous whitespace.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
